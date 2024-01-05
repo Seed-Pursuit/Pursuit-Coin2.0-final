@@ -15,6 +15,10 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
     const remainingDays = difference / (1000 * 3600 * 24);
     return remainingDays.toFixed(0);
   };
+  const getRandomLogoUrl = () => {
+    const randomId = Math.floor(Math.random() * 1000) + 1;
+    return `https://picsum.photos/id/${randomId}/300/200`;
+  };
 
   return (
     <div className="px-4 py-16 mx-auto sm-max-w-xl
@@ -32,7 +36,8 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
         transition-shadow duration-300 bg-white rounded"
             >
               <img
-                src="https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+              // src={getRandomLogoUrl()}
+                src="https://static.vecteezy.com/system/resources/previews/010/849/972/original/3d-illustration-ethereum-logo-png.png"
                 className="object-cover w-full h-64 rounded"
                 alt=""
               />

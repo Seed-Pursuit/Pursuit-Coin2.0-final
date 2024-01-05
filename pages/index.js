@@ -46,12 +46,12 @@ const index = () => {
         setDonate={setDonateCampaign}
       />
 
-      <Card
+      {/* <Card
         title="Your Campaign(s)"
         allcampaign={usercampaign}
         setOpenModel={setOpenModel}
         setDonate={setDonateCampaign}
-      />
+      /> */}
 
       {
         openModel && (
