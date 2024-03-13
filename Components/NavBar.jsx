@@ -7,7 +7,7 @@ const NavBar = () => {
   const { currentAccount, connectWallet } = useContext(CrowdFundingContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menulist = ["White Paper", "Project", "Donation", "Members"];
+  // const menulist = ["White Paper", "Project", "Donation", "Members"];
 
   return (
     <div className="backgroundMain">
@@ -24,7 +24,7 @@ const NavBar = () => {
                 Pursuit Coin
               </span>
             </a>
-            <ul className="flex items-center hidden space-x-8 lg:flex">
+            {/* <ul className="flex items-center hidden space-x-8 lg:flex">
               {menulist.map((menu, index) => (
                 <li key={index + 1}>
                   <a
@@ -37,7 +37,7 @@ const NavBar = () => {
                   </a>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           {
             !currentAccount && (
@@ -104,7 +104,7 @@ const NavBar = () => {
                     </div>
                     <nav>
                       <ul className="space-y-4">
-                        {menulist.map((menu, index) => (
+                        {/* {menulist.map((menu, index) => (
                           <li key={index + 1}>
                             <a
                               href="/"
@@ -115,7 +115,7 @@ const NavBar = () => {
                               {menu}
                             </a>
                           </li>
-                        ))}
+                        ))} */}
                         <li>
                           <a
                           href="/"

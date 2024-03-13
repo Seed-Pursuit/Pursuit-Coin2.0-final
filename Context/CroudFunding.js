@@ -25,7 +25,7 @@ export const CrowdFundingProvider = ({ children }) => {
         const signer = provider.getSigner();
         const contract = fetchContract(signer);
 
-        console.log(currentAccount);
+        console.log("current account",currentAccount);
 
         try {
             const transaction = await contract.createCampaign(
@@ -37,7 +37,7 @@ export const CrowdFundingProvider = ({ children }) => {
             );
             await transaction.wait();
             console.log("contract call success", transaction);
-
+            
         } catch (err) {
             console.log("contract call failed", err);
         }
@@ -73,6 +73,7 @@ export const CrowdFundingProvider = ({ children }) => {
             method: "eth_accounts",
         })
         const currentUser = accounts[0];
+        console.log(currentUser);
         const filteredCampaigns = allCampaigns.filter(
             (campaign) =>
                 campaign.owner === "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
