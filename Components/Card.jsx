@@ -21,8 +21,7 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
   };
 
   return (
-    <div className="px-4 py-16 mx-auto sm-max-w-xl
-    md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 py-16 mx-auto sm-max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <p className="py-16 text-2xl font-bold leading-5">
         {title}
       </p>
@@ -33,7 +32,7 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
               onClick={() => (setDonate(campaign), setOpenModel(true))}
               key={i + 1}
               className="cursor-pointer border overflow-hidden
-        transition-shadow duration-300 bg-white rounded"
+        transition-shadow duration-300 bg-[#fff] rounded"
             >
               <img
               // src={getRandomLogoUrl()}
@@ -48,8 +47,7 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
                 <a
                   href="/"
                   aria-label="Article"
-                  className="inline-block mb-3 text-black transition-colors
-        duration-200 hover:text-deep-purple-accent-700"
+                  className="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                 >
                   <p className="text-2xl font-bold leading-5">
                     {campaign.title}
